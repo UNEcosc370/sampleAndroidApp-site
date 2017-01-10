@@ -54,43 +54,118 @@
         <li class="main active"><a href="#cosc370570-sample-app">COSC370/570 Sample app</a></li>
             <li><a href="#resources">Resources</a></li>
             <li><a href="#getting-set-up">Getting set up</a></li>
+            <li><a href="#if-it-all-worked">If it all worked</a></li>
+            <li><a href="#if-it-didnt-all-work">If it didn't all work...</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
 <h1 id="cosc370570-sample-app">COSC370/570 Sample app</h1>
-<p>In UNE's User Experience and Interaction Design course, students work on designing, prototyping, and creating a mobile app through term. One of the options for developing your app is Android Studio, and so this is where we keep our notes (and a sample app) for students to check they have Android Studio set up and working.</p>
-<p>(Note, you can also use iOS, Unity, or React-Native, though we have not yet set up sample apps and resources for those.) </p>
+<p>In UNE's <a href="https://www.une.edu.au/bespokecourses/units/user-experience-and-interaction-design">User Experience and Interaction Design</a> course, students have a project where
+they work on designing, prototyping, and creating a mobile app through term. </p>
+<p>One of the options for developing your app is Android Studio, and so this is where we keep some notes (and a sample app) to encourage students to set up Android Studio before term. Terms are fairly short, so getting set up before term starts
+is always handy. And along the way, we can mention a few little things to expect.</p>
+<p><em>Note: you can also use iOS, Unity, Gluon, or React-Native in your project if you want to. We just haven't written sample apps and resources for those.</em></p>
+<p>We will go through a lot of this in class, by the way. This is to give you a chance to get set up before term
+even starts.</p>
 <h2 id="resources">Resources</h2>
 <ul>
 <li>
-<p><a href="https://developer.android.com/studio/install.html">Android Studio</a>, from Google<br />
-  They have very extensive documentation -- we're not going to try to replicate all that, but we'll give some introductions and shorter summaries as we want to get you up and running quickly</p>
+<p><a href="https://developer.android.com/studio/install.html">Android Studio</a>, from Google  </p>
+<p>They have very extensive documentation -- we're not going to try to replicate all that, but we'll give some introductions and shorter summaries as we want to get you up and running quickly</p>
 </li>
 <li>
-<p><a href="https://github.com/UNEcosc370/sampleAndroidApp">Sample app</a><br />
-  There are many sample apps out there to download and try, but it's useful for us to have one that we can point you to.</p>
+<p><a href="https://github.com/UNEcosc370/sampleAndroidApp">Sample app</a>  </p>
+<p>There are many sample apps out there to download and try, but it's useful for us to have one that we can point you to.</p>
 </li>
 <li>
-<p><a href="https://gradle.org/getting-started-android-build/">Gradle</a>, which does the building.<br />
-  Android Studio is the development environment, but behind the scenes it uses Gradle to build projects. Gradle makes it very easy, for instance, to include a library (eg, a Java physics library) in your app. You tell it the library you want, and it goes and gets it for you. Gradle also has extensive documentation, and intro videos.</p>
+<p><strong>Used behind the scenes:</strong> <a href="https://gradle.org/getting-started-android-build/">Gradle</a>, which does the building.  </p>
+<p>Android Studio is the development environment, but behind the scenes it uses Gradle to build projects. Gradle makes it very easy, for instance, to include a library (eg, a Java physics library) in your app. You tell it the library you want, and it goes and gets it for you. Gradle also has extensive documentation, and intro videos.</p>
+<p>You won't need to install Gradle yourself. Android Studio can usually fetch it for you. Just know that it's there and doing things for you behind the scenes. </p>
+</li>
+<li>
+<p><strong>Optional:</strong> <a href="https://git-scm.org">Git</a>. You don't have to use this, but we mildly encourage it. </p>
+<p>Git gives programmers a way of tracking what they've changed in their code, reverting changes that didn't work, and 
+  sharing their code with others. It was written for programmers though, so can be a bit confusing if you're new to it.</p>
+<p>In our course, if you know what git is, I'd encourage you to use it. But if you don't know what git is, don't worry
+  about it - you don't have to use it. </p>
+<p>If you have a bit of an idea what git is, but find remembering all its commands a pain, there's an app called 
+  <a href="https://www.sourcetreeapp.com/">SourceTree</a> that's a very good visual way of working with git.</p>
 </li>
 </ul>
 <h2 id="getting-set-up">Getting set up</h2>
 <ol>
 <li>
 <p><strong>Install Android Studio</strong>  </p>
-<p>First, download and install <a href="https://developer.android.com/studio/install.html">Android Studio</a>. If you want to check that the IDE itself is working, have a look at their <a href="https://developer.android.com/studio/workflow.html">workflow</a> steps, which include creating a sample app using their wizard.</p>
-<p>However, ideally we'd like to get you working with version control (so you can share your code with course staff if you have a problem), so we've also put a sample app onto GitHub for you to download and try...</p>
+<p>First, download and install <a href="https://developer.android.com/studio/install.html">Android Studio</a>. </p>
+<p>UNE students will probably find it feels somewhat familiar -- Android Studio is based on IntelliJ, which students
+will have used in COSC220 Software Design studio 2. </p>
+<p>If you haven't used it before, just think of it as a really 
+smart editor that understands what you're typing, and has buttons for most of the other tools you'll use along
+the way (such as the build tools that turn your code into a packaged program, and the emulator that can let you run
+a virtual Android phone on your computer) </p>
+<p>The Android site has a fairly detailed <a href="https://developer.android.com/studio/workflow.html">workflow</a> of steps, to
+get set up, create an app, etc. But usually, things "just work", so let's just describe the short version here.</p>
+<p>Create a new project. Just select the default option in every pane of the wizard. We're just checking your tools are
+set up and working, not creating the next bestseller app (yet).</p>
 </li>
 <li>
-<p><strong>Clone the sample app</strong></p>
-<p>From the Android Studio welcome screen, pick <em>Check out project from Version Control</em> and choose <em>Git</em>. This should pop up a little window that looks like this:</p>
-<p><img alt="Clone repository screenshot" src="./images/clone.png" /></p>
-<p>The repository URL is <a href="https://github.com/UNEcosc370/sampleAndroidApp.git">https://github.com/UNEcosc370/sampleAndroidApp.git</a>. </p>
+<p><strong>Run Android Studio's hello world app</strong></p>
+<p>Before pulling down our app, just try running the little app you've created. There's a green play button in the top toolbar of the IDE, and it'll have a "Run" tooltip if you hover over it. Click that button.</p>
+<p>Why? Well, even building and running this little program will make sure Android Studio has the "SDK" installed 
+correctly, as well as an emulator.</p>
+<p>The SDK is the set of tools that actually do the hard work of compiling and packaging your program. Android Studio
+doesn't call them directly -- instead it calls Gradle, which then calls the programs in the SDK... there's a fairly complex set of stuff behind that little green play button, but usually it just works.</p>
+<p>Android Studio should also ask you where you want to run your app. For the moment,
+use the emulator (a phone running in software on your computer), and choose the default phone it offers you 
+(usually a Nexus 5). This is going to let us try starting the emulator. </p>
+<p>Note: <em>If your computer has an Intel processor, it will usually ask you to install HAXM. This helps it to run the 
+emulated phone faster, so is usually a good thing to install</em>.</p>
+<p>At this point, Android Studio will probably go off and fetch a version of Android to run on the emulated phone, and it
+can be a little slow to boot up. All going well though, in a few minutes you should have a (very dull) app running on
+your emulated phone.</p>
+<p>There will also be a "run" area at the bottom of Android Studio with technical messages from the build tools about how its progress has been going. And some little buttons on the left hand side for terminate, re-run, and a few other useful commands.</p>
+</li>
+<li>
+<p><strong>Try running it on your physical phone, if you have one</strong></p>
+<p>If you have an Android phone, enable developer mode on it. This usually involves a secret tap somewhere in the settings menu (eg, tapping on the software version number eight times). So just Google what it is for your phone. </p>
+<p>I should let you know that some apps (eg, Pokemon Go) might stop working while it's enabled. If I recall, Pokemon Go worries that you might cheat by adjusting your GPS location to make it seem like you're walking when you're not. But you can turn developer mode off when you don't need it, so it shouldn't be very problematic.</p>
+<p>When it's enabled, plug the phone in via USB to the computer. You might find that your phone and computer ask you for permission to enable USB debugging. Yes, this is you poking around in your program to see if you can get it working, so agree. And your computer might want to go and get some drivers for your phone. So you might need to wait while it does all that.</p>
+<p>With it plugged in, stop your app on the emulator (you can close the emulator), and click the green play button again. This time, your phone should be one of the options. Try selecting that, and see if you can run the basic app on your phone.</p>
+</li>
+<li>
+<p><strong>Get the sample app</strong></p>
+<p>We've put a little sample app of our own up on GitHub. It's at <a href="https://github.com/UNEcosc370/sampleAndroidApp">https://github.com/UNEcosc370/sampleAndroidApp</a>.</p>
+<p>If you have git, you can "clone" the app (getting the code and all its version history). If not, you can just download it as a zip file from that page, and then unzip it.</p>
+<p>In Android Studio, click "Open Project..." and select the folder for the code you just downloaded. Choose the folder 
+that <em>contains</em> <code>app</code>, <code>build.gradle</code>, and <code>gradle</code>. Android Studio should recognise this as an Android project, and
+ask you if you want to open it in a new window or this window.</p>
+<p>Now try running this on the emulator, and on your phone, as you did before.</p>
+<p>This is the sample app we'll use in the first week or two of the course for explaining the beginnings of Android.
+It is really small (took an evening to write). But that gives us something small so we can poke and prod the different bits that make up a simple Android app, and find our way around, before we start to get more complicated and talk about sensors, storage, and all sorts of other stuff.</p>
+<p>It also shows a curious thing about people's cognition, called the <em>Stroop effect</em>.  It'll ask you to click buttons
+for different colours, and you should find you're a little slower and less accurate at it if the word and the colour 
+don't match. (eg, <span style="color: green">RED</span>). As this course is about designing technology for people, 
+it seemed fitting to have an app that demonstrates something about cognition.</p>
+<p>Try the app out, and have a look at your results. We'll talk about it in class too.</p>
+<p>In terms of bits of code to look at: </p>
+<ul>
+<li><code>StroopExperiment.java</code> contains the code for tracking the experiment. It's just plain old Java code, nothing fancy about it.</li>
+<li><code>StroopExperimentFrag.java</code> is the code for the buttons and labels that pop up on the screen to run the experiment.</li>
+<li><code>MainActivity.java</code> is almost empty, but its the main window that the experiment appears in.</li>
+</ul>
+<p>But we'll talk about all of this in class.</p>
 </li>
 </ol>
-<p>Instructions still in progress...</p></div>
+<h2 id="if-it-all-worked">If it all worked</h2>
+<p>Hooray, the sometimes-frustrating bit of getting the tools set up seems to have worked for you. That's good news.</p>
+<h2 id="if-it-didnt-all-work">If it didn't all work...</h2>
+<p>Silly as it sounds, often the first thing to do if you get a set-up problem is "copy the error message and paste it 
+into Google". If something has really gone wrong, usually you won't have been the first person to hit it, and often 
+a search for the error message can find where someone else has fixed that problem.</p>
+<p>When term has started, you'll have access to UNE's forums where you can do things like "ask me". </p>
+<p>But in the mean-time, there's a little <a href="https://gitter.im/UNEcosc370/Lobby">chat-room</a> where you can post the problem you've encountered. There aren't many people around before term starts, so I can't guaruntee how quickly it'll get read,
+but every week or so before term I'll pop my head in to see if there's any messages about mistakes in these instructions, or problems potential students seem to be having.</p></div>
         </div>
 
         <footer class="col-md-12">
@@ -129,5 +204,5 @@
 
 <!--
 MkDocs version : 0.16.0
-Build Date UTC : 2016-12-12 00:54:45
+Build Date UTC : 2017-01-10 02:57:29
 -->
